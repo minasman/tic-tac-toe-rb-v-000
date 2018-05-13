@@ -24,10 +24,10 @@ end
 def valid_move?(board, index)
   if index < 0 || index > 8
     return FALSE
-  elsif board[index] == " " || board[index] == "" || board[index] == NIL
-    return TRUE
-  else
+  elsif position_taken(board, index)
     return FALSE
+  else
+    return TRUE
   end
 end
 
@@ -35,11 +35,11 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
   user_move = input_to_index(user_input)
-   if !valid_move?(board, user_move)
-     turn(board)
-   else
-     move(board,user_move,current_player(board))
+   if valid_move?(board, user_move)
+     move(board, user_move, current_player(board))
      display_board(board)
+   else
+     turn(board)
    end
 end
 
@@ -129,11 +129,12 @@ def play(board)
   while over?(board) == FALSE
     turn(board)
   end
-  if draw?(board) == TRUE
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif 
+    draw?(board)
     puts "Cat's Game!"
   else
-    if won?(board) != FALSE
-      puts "Congratulations #{winner[board]}!"
-    end
+    #do nothing
   end
 end
