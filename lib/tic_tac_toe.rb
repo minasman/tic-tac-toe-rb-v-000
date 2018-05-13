@@ -131,7 +131,7 @@ def play(board)
     if draw?(board) == TRUE
       puts "The Game is A Draw"
     else
-      puts "Congratulation to #{current_player(board}"
+      puts "Congratulation to #{current_player(board)}"
     end
   else
     play(board)
