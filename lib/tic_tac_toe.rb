@@ -1,4 +1,4 @@
-# Define your WIN_COMBINATIONS constant
+request_via_redirect# Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
