@@ -130,7 +130,7 @@ def play(board)
     turn(board)
   end
   if draw?(board) == FALSE 
-    if turn_count(board).even
+    if turn_count(board).even?
       puts "Congratulations O!"
     else
       puts "Congratulations X!"
