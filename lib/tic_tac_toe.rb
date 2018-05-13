@@ -126,14 +126,7 @@ def current_player(board)
 end
 
 def play(board)
-  turn(board)
-  if over?(board) == TRUE
-    if draw?(board) == TRUE
-      puts "The Game is A Draw"
-    else
-      puts "Congratulation to #{current_player(board)}"
-    end
-  else
-    play(board)
+  while over?(board) == FALSE
+    turn(board)
   end
 end
