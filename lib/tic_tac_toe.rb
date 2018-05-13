@@ -126,7 +126,7 @@ def current_player(board)
 end
 
 def play(board)
-  while over?(board) == FALSE
+  while !over?(board)
     turn(board)
   end
   if draw?(board) == FALSE && over?(board) == TRUE && won?(board) != FALSE
