@@ -129,7 +129,7 @@ def play(board)
   while over?(board) == FALSE
     turn(board)
   end
-  if draw?(board) == FALSE && over?(board) == TRUE
+  if draw?(board) == FALSE && over?(board) == TRUE && won?(board) != FALSE
     win_board = won?(board)
     puts "Congratulations #{board[win_board[0]]}!"
   else
