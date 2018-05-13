@@ -130,7 +130,11 @@ def play(board)
     turn(board)
   end
   if draw?(board) == FALSE 
-    puts "Congratulations #{current_player(board)}!"
+    if turn_count(board).even
+      puts "Congratulations O!"
+    else
+      puts "Congratulations X!"
+    end
   else
     puts "Cat's Game!"
   end
