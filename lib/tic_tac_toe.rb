@@ -133,8 +133,7 @@ def play(board)
     puts "Cat's Game!"
   else
     if won?(board) != FALSE
-      win_board = won?(board)
-      puts "Congratulations #{board[win_board[0]]}!"
+      puts "Congratulations #{winner[board]}!"
     end
   end
 end
